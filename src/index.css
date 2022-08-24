@@ -9,6 +9,8 @@
 body {
     width: auto;
     height: 100vh;
+    background-color: #b4c5db;
+    /* color: #dae9f3; */
 }
 
 .activity {
@@ -21,19 +23,22 @@ body {
 
 /*add-from*/
 .activity-AddActivity {
-    /* background-color: #F2D541; */
+    background-color: #547993;
     display: flex;
     flex-direction: column;
     flex-basis: 30%;
     padding: 20px;
     margin: 24px;
-    border: 1px solid salmon;
+    /* border: 1px solid salmon; */
     align-content: space-around;
 
 }
 
 h1 {
     text-align: center;
+    font-size: 32px;
+    color: white;
+    padding: 16px;
 }
 
 label {
@@ -41,6 +46,7 @@ label {
     align-items: center;
     font-size: 24px;
     margin: 16px;
+    color: antiquewhite;
 }
 
 .box select {
@@ -57,7 +63,7 @@ label {
 
 select:invalid+span::after {
     content: '!! is required or invalid';
-    color: red;
+    color: #6f263c;
 }
 
 /* content: '✖'; */
@@ -71,7 +77,8 @@ span::after {
 
 input:invalid+span::after {
     content: '!! is required or invalid';
-    color: red;
+    color: #6f263c;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 /* input:valid+span::after {
@@ -84,7 +91,7 @@ input[type=text], input[type=number], input[type=date], select {
     padding-left: 12px;
     font-size: 14px;
     font-weight: normal;
-    border: 1px solid rgb(137, 151, 155);
+    border: 1px solid rgb(58, 114, 130);
     transition: border-color 150ms ease-in-out 0s;
     outline: none;
     color: rgb(33, 49, 60);
@@ -108,13 +115,15 @@ textarea {
 }
 
 button {
-    background-color: #04AA6D;
+    background-color: #5d585f;
     border: none;
     color: white;
     padding: 16px 32px;
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
+    font-size: 16px;
+
 }
 
 
@@ -124,17 +133,21 @@ button {
     flex-direction: column;
     flex-basis: 65%;
     padding: 20px;
-    border: 1px solid yellowgreen;
+    /* border: 1px solid yellowgreen; */
     margin: 24px;
-
+    background-color: #547993;
+    border-radius: 10px;
 }
 
 /*card*/
 .all-card {
     display: flex;
-    border: #04AA6D solid 1px;
+    /* border: #403a38 solid 1px; */
+    background-color: whitesmoke;
     position: relative;
-    padding: 10px;
+    padding: 0 32px;
+    margin: 8px;
+    border-radius: 10px;
 }
 
 .container-button {

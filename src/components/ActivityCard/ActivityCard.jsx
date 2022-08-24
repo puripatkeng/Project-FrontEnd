@@ -10,7 +10,7 @@ const Card = ({ item, edit, remove }) => {
         <div className="item first-row-item">Calories :{item.calories}</div>
         <div className="item2 first-row-item">
           <button
-            style={{ backgroundColor: "red", padding: "10px" }}
+            style={{ backgroundColor: "#222a37", padding: "10px" }}
             className="edit-button"
             onClick={() => {
               edit(item.id);
@@ -19,7 +19,7 @@ const Card = ({ item, edit, remove }) => {
             <i className="uil uil-edit"></i>
           </button>
           <button
-            style={{ backgroundColor: "red", padding: "10px" }}
+            style={{ backgroundColor: "#612334", padding: "10px" }}
             className="edit-button"
             onClick={() => {
               remove(item._id);
