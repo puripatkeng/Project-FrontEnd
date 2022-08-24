@@ -4,10 +4,10 @@ const Card = ({ item, edit, remove }) => {
   return (
     <div className="all-card">
       <div className="grid">
-        <div className="item first-row-item">Type :{item.type}</div>
-        <div className="item first-row-item">Date :{item.date}</div>
-        <div className="item first-row-item">Duration :{item.durations}</div>
-        <div className="item first-row-item">Calories :{item.calories}</div>
+        <div className="item first-row-item"><span>Type</span>&nbsp;{item.type}</div>
+        <div className="item first-row-item"><span>Date</span>&nbsp;{item.date} </div>
+        <div className="item first-row-item"><span>Duration</span>&nbsp;{item.durations} </div>
+        <div className="item first-row-item"><span>Calories</span>&nbsp;{item.calories} </div>
         <div className="item2 first-row-item">
           <button
             style={{ backgroundColor: "#222a37", padding: "10px" }}
@@ -28,7 +28,7 @@ const Card = ({ item, edit, remove }) => {
             <i className="uil uil-trash-alt"></i>
           </button>
         </div>
-        <div className="item second-row-item">Notes :{item.note}</div>
+        <div className="item second-row-item"><span>Notes</span>&nbsp;{item.note}</div>
         {" "}
       </div>
     </div>

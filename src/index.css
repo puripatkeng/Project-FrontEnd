@@ -1,57 +1,124 @@
 * {
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Condensed', sans-serif;
-    line-height: 1.5;
+    line-height: 1;
 }
 
 body {
-    width: auto;
+    width: 100vw;
     height: 100vh;
     background-color: #b4c5db;
-    /* color: #dae9f3; */
+    font-weight: 500;
+    color: rgb(33, 49, 60);
+
+}
+
+.headline {
+    font: 3em sans-serif;
+    font-weight: bolder;
+    color: #0b1028;
+    text-shadow: 08px, 08px;
+    margin: 0.4rem;
+    background-color: #8aabc2;
+    text-align: center;
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    padding: 0.4em;
+    text-align: center;
+    font-size: 3.5rem;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 0px -6px 0 #212121,
+        0px -6px 0 #212121,
+        0px 6px 0 #212121,
+        0px 6px 0 #212121,
+        -6px 0px 0 #212121,
+        6px 0px 0 #212121,
+        -6px 0px 0 #212121,
+        6px 0px 0 #212121,
+        -6px -6px 0 #212121,
+        6px -6px 0 #212121,
+        -6px 6px 0 #212121,
+        6px 6px 0 #212121,
+        -6px 18px 0 #212121,
+        0px 18px 0 #212121,
+        6px 18px 0 #212121,
+        0 19px 1px rgba(0, 0, 0, .1),
+        0 0 6px rgba(0, 0, 0, .1),
+        0 6px 3px rgba(0, 0, 0, .3),
+        0 12px 6px rgba(0, 0, 0, .2),
+        0 18px 18px rgba(0, 0, 0, .25),
+        0 24px 24px rgba(0, 0, 0, .2),
+        0 36px 36px rgba(0, 0, 0, .15);
+    /* box-shadow: 0 0 .2rem #0b10287e,
+        0 0 .2rem #0b10287e,
+        0 0 2rem #0b10287e,
+        0 0 0.8rem #0b10287e,
+        0 0 2.8rem #0b10287e,
+        inset 0 0 1.3rem #0b10287e; */
+}
+
+
+
+.all-card span {
+    font: 1.2em sans-serif;
+    font-weight: bolder;
+    color: rgb(7, 16, 56);
+    text-shadow: 08px, 08px;
+    border: 0.2rem solid #fff;
+    border-radius: 1.5rem;
+    padding: 0.4em;
+    background-color: #0b102823;
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.71);
 }
 
 .activity {
     display: flex;
-}
-
-.container {
-    padding: 10px 10%;
+    justify-content: center;
 }
 
 /*add-from*/
 .activity-AddActivity {
-    background-color: #547993;
+    background-color: #8aabc2;
     display: flex;
     flex-direction: column;
     flex-basis: 30%;
     padding: 20px;
-    margin: 24px;
-    /* border: 1px solid salmon; */
+    margin: 20px;
     align-content: space-around;
-
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    flex-wrap: nowrap;
 }
 
 h1 {
     text-align: center;
-    font-size: 32px;
-    color: white;
-    padding: 16px;
+    font-size: 3rem;
+    color: rgb(7, 16, 56);
+    padding: 0.2rem;
+    font-weight: bolder;
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.71);
 }
 
+
 label {
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.71);
     display: flex;
     align-items: center;
-    font-size: 24px;
-    margin: 16px;
-    color: antiquewhite;
+    font-size: 2.5rem;
+    margin: 0.2rem;
+    color: rgb(7, 16, 56);
+    text-shadow: 08px, 08px;
+    padding: 0.5em;
 }
 
 .box select {
-    /* background-color: #0563af; */
-    /* color: white; */
+    background-color: #0563af;
+    color: white;
     padding: 12px;
     border: none;
     font-size: 20px;
@@ -62,8 +129,9 @@ label {
 }
 
 select:invalid+span::after {
-    content: '!! is required or invalid';
+    content: 'Input is required or invalid';
     color: #6f263c;
+
 }
 
 /* content: '✖'; */
@@ -86,17 +154,19 @@ input:invalid+span::after {
 } */
 
 input[type=text], input[type=number], input[type=date], select {
-    height: 36px;
-    border-radius: 4px;
+    background-color: rgb(183, 207, 239);
+    height: 48px;
+    border-radius: 8px;
     padding-left: 12px;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: normal;
     border: 1px solid rgb(58, 114, 130);
     transition: border-color 150ms ease-in-out 0s;
     outline: none;
     color: rgb(33, 49, 60);
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
     padding-right: 12px;
+    border: 0.1rem solid #fff;
 }
 
 input:hover {
@@ -105,49 +175,107 @@ input:hover {
 
 
 textarea {
-    height: 150px;
+    background-color: rgb(183, 207, 239);
+    height: 100px;
     padding: 12px 20px;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
-    background-color: #f8f8f8;
     resize: none;
+    margin-bottom: 36px;
+    transition: border-color 150ms ease-in-out 0s;
+    border: 0.1rem solid #fff;
+}
+
+textarea:hover {
+    box-shadow: rgb(231 238 236) 0px 0px 0px 3px;
 }
 
 button {
+    border: 0.1rem solid #fff;
     background-color: #5d585f;
-    border: none;
     color: white;
     padding: 16px 32px;
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 24px;
+    border-radius: 10px;
+    transition: all 0.5s;
+    position: relative;
+}
 
+button::before {
+    border-radius: 10px;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(200, 220, 200, 0.3);
+    transition: all 0.3s;
+}
+
+button:hover::before {
+    border-radius: 10px;
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+}
+
+button::after {
+    border-radius: 10px;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    transform: scale(1.2, 1.2);
+}
+
+button:hover::after {
+    border-radius: 10px;
+    opacity: 1;
+    transform: scale(1, 1);
 }
 
 
 
+
+
+
+.x>h1 {
+    margin-bottom: 16px;
+}
+
 .x {
+    background-color: #8aabc2;
     display: flex;
     flex-direction: column;
-    flex-basis: 65%;
+    flex-basis: 30%;
     padding: 20px;
-    /* border: 1px solid yellowgreen; */
-    margin: 24px;
-    background-color: #547993;
-    border-radius: 10px;
+    margin: 20px;
+    align-content: space-around;
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    flex-wrap: nowrap;
+
 }
 
 /*card*/
 .all-card {
     display: flex;
-    /* border: #403a38 solid 1px; */
-    background-color: whitesmoke;
+    background-color: rgb(183, 207, 239);
     position: relative;
-    padding: 0 32px;
-    margin: 8px;
-    border-radius: 10px;
+    padding: 0 30px;
+    margin: 20px 0;
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
 }
 
 .container-button {
@@ -168,6 +296,7 @@ button {
 .first-row-item {
     grid-column: span 1;
     width: 100%;
+
 }
 
 .second-row-item {
@@ -178,6 +307,7 @@ button {
     display: flex;
     align-items: center;
     padding: 12px 0;
+
 
 }
 
@@ -192,4 +322,10 @@ button {
 .pagination {
     display: flex;
     justify-content: center;
+    background-color: #8aabc2;
+    margin: 1rem;
+    align-content: space-around;
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    padding: 1rem;
 }
