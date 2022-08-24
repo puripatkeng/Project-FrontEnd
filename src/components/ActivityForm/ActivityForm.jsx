@@ -36,7 +36,7 @@ const AddActivity = ({ fetchData }) => {
         "Content-Type": "application/json",
       };
       axios
-        .post("http://project-back-end-new.vercel.app/api/activities/", newItem, { headers })
+        .post("http://project-back-end.vercel.app/api/activities/", newItem, { headers })
         .then(() => {
           setForm(defaultForm);
           fetchData();
