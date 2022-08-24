@@ -20,7 +20,7 @@ function Activity() {
   const fetchData = async (currentPage) => {
     try {
       const response = await axios.get(
-        `http://127.0.0.1:8080/activities/?page=${currentPage}`
+        `http://project-back-end-puripatkeng.vercel.app/activities/?page=${currentPage}`
       );
 
       const data = response.data;
@@ -50,7 +50,7 @@ function Activity() {
         };
         console.log(editForm);
         axios
-          .patch(`http://127.0.0.1:8080/activities/${id}/`, editForm, {
+          .patch(`http://project-back-end-puripatkeng.vercel.app/activities/${id}/`, editForm, {
             headers,
           })
           .then((res) => {
@@ -79,7 +79,7 @@ function Activity() {
     if (popupDelete.show && popupDelete.id) {
       let del = list.filter((act) => act.id !== popupDelete.id);
       axios
-        .delete(`http://127.0.0.1:8080/activities/${popupDelete.id}/`)
+        .delete(`http://project-back-end-puripatkeng.vercel.app/activities/${popupDelete.id}/`)
         .then((res) => {
           setList(del);
           fetchData();

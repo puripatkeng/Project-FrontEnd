@@ -36,7 +36,7 @@ const AddActivity = ({ fetchData }) => {
         "Content-Type": "application/json",
       };
       axios
-        .post("http://127.0.0.1:8080/activities/", newItem, { headers })
+        .post("http://project-back-end-puripatkeng.vercel.app/activities/", newItem, { headers })
         .then(() => {
           setForm(defaultForm);
           fetchData();

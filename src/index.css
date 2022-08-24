@@ -146,8 +146,9 @@ button {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(5, 300px);
-
+    grid-template-columns: repeat(5, 200px);
+    min-width: 160px;
+    /* min-width: 160px; */
     grid-auto-flow: row;
 }
 
