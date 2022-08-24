@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 1.5;
+}
+
+body {
+    width: auto;
+    height: 100vh;
+}
+
+.activity {
+    display: flex;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+/*add-from*/
+.activity-AddActivity {
+    /* background-color: #F2D541; */
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    padding: 20px;
+    margin: 24px;
+    border: 1px solid salmon;
+    align-content: space-around;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    margin: 16px;
+}
+
+.box select {
+    /* background-color: #0563af; */
+    /* color: white; */
+    padding: 12px;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+}
+
+select:invalid+span::after {
+    content: '!! is required or invalid';
+    color: red;
+}
+
+/* content: '✖'; */
+/* select:valid+span::after {
+    content: '✓';
+} */
+
+span::after {
+    padding-left: 5px;
+}
+
+input:invalid+span::after {
+    content: '!! is required or invalid';
+    color: red;
+}
+
+/* input:valid+span::after {
+    content: '✓';
+} */
+
+input[type=text], input[type=number], input[type=date], select {
+    height: 36px;
+    border-radius: 4px;
+    padding-left: 12px;
+    font-size: 14px;
+    font-weight: normal;
+    border: 1px solid rgb(137, 151, 155);
+    transition: border-color 150ms ease-in-out 0s;
+    outline: none;
+    color: rgb(33, 49, 60);
+    background-color: rgb(255, 255, 255);
+    padding-right: 12px;
+}
+
+input:hover {
+    box-shadow: rgb(231 238 236) 0px 0px 0px 3px;
+}
+
+
+textarea {
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+
+button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+
+.x {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 65%;
+    padding: 20px;
+    border: 1px solid yellowgreen;
+    margin: 24px;
+
+}
+
+/*card*/
+.all-card {
+    display: flex;
+    border: #04AA6D solid 1px;
+    position: relative;
+    padding: 10px;
+}
+
+.container-button {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    padding: 15px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 300px);
+
+    grid-auto-flow: row;
+}
+
+.first-row-item {
+    grid-column: span 1;
+    width: 100%;
+}
+
+.second-row-item {
+    grid-column: span 5;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+
+}
+
+.item2 {
+    display: flex;
+    justify-content: end;
+    align-items: flex-start;
+    padding: 12px 0;
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
