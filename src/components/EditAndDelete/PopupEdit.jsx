@@ -1,5 +1,5 @@
 import "./PopupEdit.css";
-
+import Swal from "sweetalert2";
 const Popup = (props) => {
   const { editForm, setEditForm, update, setCheckEditItem } = props;
 
@@ -7,6 +7,12 @@ const Popup = (props) => {
     // e.preventDefault();
     console.log(editForm.id);
     update(editForm.id, editForm);
+    Swal.fire({
+      title: "Done !!",
+      text: "Update success",
+      icon: "success",
+      confirmButtonText: "OK!",
+    })
   };
 
   const handleEditChange = (e) => {

@@ -5,7 +5,7 @@ import axios from "axios";
 import Popup from "./EditAndDelete/PopupEdit";
 import Delete from "./EditAndDelete/PopupDelete";
 import Pagination from "./ActivityList/Pagination";
-
+import Swal from "sweetalert2";
 function Activity() {
   const [list, setList] = useState([]);
   const [checkEditItem, setCheckEditItem] = useState(false);
@@ -19,9 +19,9 @@ function Activity() {
 
   const fetchData = async (currentPage) => {
     try {
-      console.log(typeof(currentPage));
+      console.log(typeof currentPage);
       const response = await axios.get(
-        `https://project-back-end.vercel.app/api/activities/?page=${currentPage}`
+        `https://project-back-end-kappa.vercel.app/api/activities/?page=${currentPage}`
       );
 
       const data = response.data;
@@ -51,7 +51,7 @@ function Activity() {
         };
         console.log(editForm);
         axios
-          .patch(`https://project-back-end.vercel.app/api/activities/${id}/`, editForm, {
+          .patch(`https://project-back-end-kappa.vercel.app/api/activities/${id}/`, editForm, {
             headers,
           })
           .then((res) => {
@@ -80,10 +80,16 @@ function Activity() {
     if (popupDelete.show && popupDelete.id) {
       let del = list.filter((act) => act.id !== popupDelete.id);
       axios
-        .delete(`https://project-back-end.vercel.app/api/activities/${popupDelete.id}/`)
+        .delete(`https://project-back-end-kappa.vercel.app/api/activities/${popupDelete.id}/`)
         .then((res) => {
           setList(del);
           fetchData();
+          Swal.fire({
+            title: "Done !!",
+            text: "Delete success",
+            icon: "success",
+            confirmButtonText: "OK!",
+          });
         });
       setPopupDelete({
         show: false,
@@ -104,8 +110,6 @@ function Activity() {
     // console.log(currentPage);
     fetchData(currentPage);
   }, [currentPage + 1]);
-
-
 
   return (
     <div>
