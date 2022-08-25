@@ -6,9 +6,9 @@ const Card = ({ item, edit, remove }) => {
       <div className="grid">
         <div className="item first-row-item"><span><h3>Activity Type :</h3><h4>{item.type}</h4></span></div>
         <div className="item first-row-item"><span><h3>Date :</h3><h4>{item.date}</h4></span></div>
-        <div className="item first-row-item"><span><h3>Duration :</h3><h4>{item.durations}</h4></span></div>
-        <div className="item first-row-item"><span><h3>Calories :</h3><h4>{item.calories}</h4></span></div>
-        <div className="item2 first-row-item">
+        <div className="item third-row-item"><span><h3>Duration :</h3><h4>{item.durations}</h4></span></div>
+        <div className="item  third-row-item"><span><h3>Calories :</h3><h4>{item.calories}</h4></span></div>
+        <div className="item2 third-row-item">
           <button
             style={{ backgroundColor: "#222a37", padding: "10px" }}
             className="edit-button"

@@ -57,7 +57,7 @@ body {
         0 18px 18px rgba(0, 0, 0, .25),
         0 24px 24px rgba(0, 0, 0, .2),
         0 36px 36px rgba(0, 0, 0, .15); */
-    /* box-shadow: 0 0 .2rem #0b10287e,
+        /* box-shadow: 0 0 .2rem #0b10287e,
         0 0 .2rem #0b10287e,
         0 0 2rem #0b10287e,
         0 0 0.8rem #0b10287e,
@@ -281,17 +281,21 @@ button:hover::after {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(5, 230px);
+    grid-template-columns: repeat(7, 160px);
     grid-auto-flow: row;
 }
 
 .first-row-item {
-    grid-column: span 1;
+    grid-column: span 2;
     /* width: 100%; */
 }
 
 .second-row-item {
-    grid-column: span 5;
+    grid-column: span 7;
+}
+
+.row3 {
+    grid-column: span 1;
 }
 
 .first-row-item>span>h3 {
@@ -326,8 +330,26 @@ button:hover::after {
     text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.71);
     display: inline;
 }
-
+.third-row-item>span>h3 {
+    font: 1em sans-serif;
+    font-weight: bolder;
+    color: rgb(7, 16, 56);
+    text-shadow: 08px, 08px;
+    border: 0.2rem solid #fff;
+    border-radius: 1.5rem;
+    padding: 0.4em;
+    background-color: #0b102823;
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.71);
+    display: inline;
+}
 .second-row-item>span>h4 {
+    border-radius: 0.5rem;
+    padding: 0.4rem;
+    display: inline;
+    width: 100%;
+}
+
+.third-row-item>span>h4 {
     border-radius: 0.5rem;
     padding: 0.4rem;
     display: inline;

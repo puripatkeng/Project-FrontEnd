@@ -51,7 +51,7 @@ function Activity() {
         };
         console.log(editForm);
         axios
-          .patch(`https://project-back-end-puripatkeng.vercel.app/api/api/activities/${id}/`, editForm, {
+          .patch(`https://project-back-end-puripatkeng.vercel.app/api/activities/${id}/`, editForm, {
             headers,
           })
           .then((res) => {
