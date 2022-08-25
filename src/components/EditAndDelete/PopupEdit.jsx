@@ -41,11 +41,11 @@ const Popup = (props) => {
         </select>
         <span className="validity"></span>
 
-        <label>Duration (minute) </label>
+        <label>Date </label>
         <input
           name="date"
           type="date"
-          value={editForm.durations}
+          value={editForm.date}
           onChange={handleEditChange}
           min="2000-01-01" max="2025-12-31"
           required
