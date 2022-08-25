@@ -1,25 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
 * {
 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Condensed', sans-serif;
-    line-height: 1;
+    line-height: 1.3;
 }
 
 body {
-    width: 100vw;
+    /* width: 100vw; */
     height: 100vh;
     background-color: #b4c5db;
     font-weight: 500;
-    color: rgb(33, 49, 60);
+    color: rgb(59, 99, 126);
+    font-size: 18px;
 
 }
 
+
 .headline {
-    font: 3em sans-serif;
+    font: 3em;
     font-weight: bolder;
-    color: #0b1028;
     text-shadow: 08px, 08px;
     margin: 0.4rem;
     background-color: #8aabc2;
@@ -28,12 +31,12 @@ body {
     border-radius: 2rem;
     padding: 0.4em;
     text-align: center;
-    font-size: 3.5rem;
-    color: #fff;
+    font-size: 4rem;
+    color: white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-shadow: 0px -6px 0 #212121,
-        0px -6px 0 #212121,
+        /* 0px -6px 0 #212121,
         0px 6px 0 #212121,
         0px 6px 0 #212121,
         -6px 0px 0 #212121,
@@ -53,7 +56,7 @@ body {
         0 12px 6px rgba(0, 0, 0, .2),
         0 18px 18px rgba(0, 0, 0, .25),
         0 24px 24px rgba(0, 0, 0, .2),
-        0 36px 36px rgba(0, 0, 0, .15);
+        0 36px 36px rgba(0, 0, 0, .15); */
     /* box-shadow: 0 0 .2rem #0b10287e,
         0 0 .2rem #0b10287e,
         0 0 2rem #0b10287e,
@@ -64,17 +67,7 @@ body {
 
 
 
-.all-card span {
-    font: 1.2em sans-serif;
-    font-weight: bolder;
-    color: rgb(7, 16, 56);
-    text-shadow: 08px, 08px;
-    border: 0.2rem solid #fff;
-    border-radius: 1.5rem;
-    padding: 0.4em;
-    background-color: #0b102823;
-    text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.71);
-}
+
 
 .activity {
     display: flex;
@@ -107,13 +100,14 @@ h1 {
 
 label {
     text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.71);
-    display: flex;
+    font-weight: bolder;
     align-items: center;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     margin: 0.2rem;
     color: rgb(7, 16, 56);
     text-shadow: 08px, 08px;
     padding: 0.5em;
+    /* border: 0.2rem solid #fff; */
 }
 
 .box select {
@@ -179,8 +173,7 @@ textarea {
     height: 100px;
     padding: 12px 20px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
+    border-radius: 10px;
     resize: none;
     margin-bottom: 36px;
     transition: border-color 150ms ease-in-out 0s;
@@ -273,9 +266,10 @@ button:hover::after {
     background-color: rgb(183, 207, 239);
     position: relative;
     padding: 0 30px;
-    margin: 20px 0;
+    margin: 1.2rem 0;
     border: 0.2rem solid #fff;
-    border-radius: 2rem;
+    border-radius: 1.4rem;
+    width: fit-content;
 }
 
 .container-button {
@@ -287,28 +281,63 @@ button:hover::after {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(5, 200px);
-    min-width: 160px;
-    /* min-width: 160px; */
+    grid-template-columns: repeat(5, 230px);
     grid-auto-flow: row;
 }
 
 .first-row-item {
     grid-column: span 1;
-    width: 100%;
-
+    /* width: 100%; */
 }
 
 .second-row-item {
     grid-column: span 5;
 }
 
+.first-row-item>span>h3 {
+    font: 1em sans-serif;
+    font-weight: bolder;
+    color: rgb(7, 16, 56);
+    text-shadow: 08px, 08px;
+    border: 0.2rem solid #fff;
+    border-radius: 1.5rem;
+    padding: 0.4em;
+    background-color: #0b102823;
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.71);
+    display: inline;
+}
+
+.first-row-item>span>h4 {
+    border-radius: 0.5rem;
+    padding: 0.4rem;
+    display: inline;
+    width: 100%;
+}
+
+.second-row-item>span>h3 {
+    font: 1em sans-serif;
+    font-weight: bolder;
+    color: rgb(7, 16, 56);
+    text-shadow: 08px, 08px;
+    border: 0.2rem solid #fff;
+    border-radius: 1.5rem;
+    padding: 0.4em;
+    background-color: #0b102823;
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.71);
+    display: inline;
+}
+
+.second-row-item>span>h4 {
+    border-radius: 0.5rem;
+    padding: 0.4rem;
+    display: inline;
+    width: 100%;
+}
+
 .item {
     display: flex;
     align-items: center;
-    padding: 12px 0;
-
-
+    padding: 12px 0 20px 0;
 }
 
 .item2 {
@@ -323,7 +352,7 @@ button:hover::after {
     display: flex;
     justify-content: center;
     background-color: #8aabc2;
-    margin: 1rem;
+    margin: 0.5rem;
     align-content: space-around;
     border: 0.2rem solid #fff;
     border-radius: 2rem;

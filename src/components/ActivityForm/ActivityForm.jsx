@@ -36,7 +36,7 @@ const AddActivity = ({ fetchData }) => {
         "Content-Type": "application/json",
       };
       axios
-        .post("https://project-back-end.vercel.app/api/activities/", newItem, { headers })
+        .post("https://project-front-end-kappa.vercel.app/api/activities/", newItem, { headers })
         .then(() => {
           setForm(defaultForm);
           fetchData();
@@ -50,7 +50,7 @@ const AddActivity = ({ fetchData }) => {
     <div className="activity-AddActivity">
       <h1>Add Activity</h1>
 
-      <label>Activity</label>
+      <label>Activity Type</label>
       <select name="type" value={form.type} onChange={handleChange} required>
         <option value="">Select Your Activity &hellip;</option>
         <option value="Swimming">Swimming</option>
@@ -66,6 +66,7 @@ const AddActivity = ({ fetchData }) => {
         type="date"
         value={form.date}
         onChange={handleChange}
+        min="2000-01-01" max="2025-12-31"
         required
       />
       <span className="validity"></span>

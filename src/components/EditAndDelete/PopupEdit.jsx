@@ -24,9 +24,9 @@ const Popup = (props) => {
 
   return (
     <div className="backdrop">
-      <div className="activity-AddActivity">
+      <div className="form-edit">
         <h1>Edit Activity</h1>
-        <label>Activity</label>
+        <label>Activity Type</label>
         <select
           name="type"
           value={editForm.type}
@@ -47,6 +47,7 @@ const Popup = (props) => {
           type="date"
           value={editForm.durations}
           onChange={handleEditChange}
+          min="2000-01-01" max="2025-12-31"
           required
         />
         <span className="validity"></span>
